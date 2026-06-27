@@ -124,3 +124,15 @@ header {
     font-size: 1.6rem;
   }
 }
+
+/* ===== INTERNAL PAGES ===== */
+.page {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
