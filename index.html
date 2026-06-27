@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Set language BEFORE the page paints (prevents the flash) -->
+  <script>
+    (function () {
+      var lang = localStorage.getItem('lang') || 'pt';
+      document.documentElement.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+    })();
+  </script>
   <title>Guilherme Betta</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -11,16 +19,23 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <span class="site-name">Guilherme Gramuglia Betta</span>
-      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+      <a href="index.html" class="site-name">Guilherme Gramuglia Betta</a>
+      <button id="lang-toggle" onclick="toggleLang()">
+        <span class="pt">EN</span>
+        <span class="en">PT</span>
+      </button>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1 data-pt="Olá, eu sou o Guilherme." data-en="Hi, I'm Guilherme.">Olá, eu sou o Guilherme.</h1>
-    <p data-pt="Estudante de Engenharia Agronômica na ESALQ/USP" data-en="Agronomy Engineering student at ESALQ/USP">
-      Estudante de Engenharia Agronômica na ESALQ/USP
+    <h1>
+      <span class="pt">Olá, eu sou o Guilherme.</span>
+      <span class="en">Hi, I'm Guilherme.</span>
+    </h1>
+    <p>
+      <span class="pt">Estudante de Engenharia Agronômica na ESALQ/USP</span>
+      <span class="en">Agronomy Engineering student at ESALQ/USP</span>
     </p>
     <a href="https://github.com/Guilherme-Betta" target="_blank">GitHub</a>
   </section>
@@ -29,23 +44,47 @@
   <main class="section-grid">
 
     <a href="projects.html" class="section-card" id="card-projects">
-      <h2 data-pt="Projetos" data-en="Projects">Projetos</h2>
-      <p data-pt="No que estou trabalhando agora" data-en="What I'm currently working on">No que estou trabalhando agora</p>
+      <h2>
+        <span class="pt">Projetos</span>
+        <span class="en">Projects</span>
+      </h2>
+      <p>
+        <span class="pt">No que estou trabalhando agora</span>
+        <span class="en">What I'm currently working on</span>
+      </p>
     </a>
 
     <a href="areas.html" class="section-card" id="card-areas">
-      <h2 data-pt="Áreas" data-en="Areas">Áreas</h2>
-      <p data-pt="Vida acadêmica, fitness, interesses" data-en="Academic life, fitness, interests">Vida acadêmica, fitness, interesses</p>
+      <h2>
+        <span class="pt">Áreas</span>
+        <span class="en">Areas</span>
+      </h2>
+      <p>
+        <span class="pt">Vida acadêmica, fitness, interesses</span>
+        <span class="en">Academic life, fitness, interests</span>
+      </p>
     </a>
 
     <a href="resources.html" class="section-card" id="card-resources">
-      <h2 data-pt="Recursos" data-en="Resources">Recursos</h2>
-      <p data-pt="Certificados e materiais" data-en="Certificates and materials">Certificados e materiais</p>
+      <h2>
+        <span class="pt">Recursos</span>
+        <span class="en">Resources</span>
+      </h2>
+      <p>
+        <span class="pt">Certificados e materiais</span>
+        <span class="en">Certificates and materials</span>
+      </p>
     </a>
 
     <a href="archives.html" class="section-card" id="card-archives">
-      <h2 data-pt="Arquivo" data-en="Archives">Arquivo</h2>
-      <p data-pt="Projetos concluídos" data-en="Completed projects">Projetos concluídos</p>
+      <h2>
+        <span class="pt">Arquivo</span>
+        <span class="en">Archives</span>
+      </h2>
+      <p>
+        <span class="pt">Projetos concluídos</span>
+        <span class="en">Completed projects</span>
+      </p>
     </a>
 
   </main>

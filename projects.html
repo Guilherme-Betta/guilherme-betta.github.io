@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Set language BEFORE the page paints (prevents the flash) -->
+  <script>
+    (function () {
+      var lang = localStorage.getItem('lang') || 'pt';
+      document.documentElement.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+    })();
+  </script>
   <title>Projects — Guilherme Betta</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -12,13 +20,19 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="site-name">Guilherme Gramuglia Betta</a>
-      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+      <button id="lang-toggle" onclick="toggleLang()">
+        <span class="pt">EN</span>
+        <span class="en">PT</span>
+      </button>
     </div>
   </header>
 
   <!-- PAGE CONTENT -->
   <main class="page">
-    <h1 data-pt="Projetos" data-en="Projects">Projetos</h1>
+    <h1>
+      <span class="pt">Projetos</span>
+      <span class="en">Projects</span>
+    </h1>
 
     <!-- Content to be added next, section by section -->
 

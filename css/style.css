@@ -17,6 +17,13 @@ a {
   text-decoration: none;
 }
 
+/* ===== LANGUAGE VISIBILITY ===== */
+/* Default (and no-JS fallback): show Portuguese, hide English. */
+.en { display: none; }
+/* When English is active, flip it. */
+.lang-en .pt { display: none; }
+.lang-en .en { display: inline; }
+
 /* ===== HEADER ===== */
 header {
   padding: 1rem 2rem;
@@ -114,17 +121,6 @@ header {
   color: #666;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .section-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-}
-
 /* ===== INTERNAL PAGES ===== */
 .page {
   max-width: 960px;
@@ -135,4 +131,15 @@ header {
 .page h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
 }
