@@ -143,3 +143,22 @@ header {
     font-size: 1.6rem;
   }
 }
+
+/* ===== PROJECTS (structural spacing only — visual design comes later) ===== */
+.project {
+  margin-bottom: 2rem;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.projects-completed {
+  margin-top: 3rem;
+}
+
+.projects-active h2,
+.projects-completed h2 {
+  margin-bottom: 1rem;
+}
